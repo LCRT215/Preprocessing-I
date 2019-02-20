@@ -133,28 +133,38 @@ table {
 * {
   box-sizing: border-box;
 }
-
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   height: 100%;
-  font-size: 14px;
+}
+.container {
+  max-width: 1024px;
+  font-size: 1.4rem;
 }
 // Variables
-@primary-pink: #f3f6f6;
-@primary-grey: #f3dae1;
+@primary-grey: #f3f6f6;
+@primary-pink: #f3dae1;
+
+// Mixins
+
+.center {
+  justify-content: center;
+  align-content: center;
+}
 
 // Header
 header {
   // border: 1px red solid;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   height: 50px;
-  padding-bottom: 10px;
-  background-color: @primary-pink;
+  width: 100%;
+  background-color: @primary-grey;
 
   @media (max-width: 500px) {
-    background-color: @primary-grey;
+    background-color: @primary-pink;
     align-items: center;
     justify-content: center;
   }
@@ -169,15 +179,12 @@ header {
   }
 }
 
-.page {
-  width: 80%;
-}
 // Welcome Card
 
 section.welcome-card {
   margin-top: 20px;
   display: flex;
-  height: 20%;
+
   img {
   }
 }
@@ -185,7 +192,6 @@ section.welcome-card {
 .welcome-card-div1 {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 
   @media (max-width: 500px) {
     align-items: center;
@@ -193,12 +199,10 @@ section.welcome-card {
   }
   h1 {
     font-size: 4rem;
-    width: 100%;
     height: auto;
   }
   p {
     margin: 1em 0;
-    width: 100%;
   }
 }
 
@@ -208,5 +212,16 @@ section.welcome-card {
   @media (max-width: 500px) {
     align-items: center;
     justify-content: center;
+  }
+}
+
+section.mid-card {
+  display: flex;
+  background: #f9f1f3;
+
+  div.mid {
+    justify-content: space-around;
+    border: purple 2px solid;
+    .center;
   }
 }
