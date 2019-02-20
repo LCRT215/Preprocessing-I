@@ -160,3 +160,40 @@ header nav a {
     font-size: 1rem;
   }
 }
+.page {
+  width: 80%;
+}
+section.welcome-card {
+  margin-top: 20px;
+  display: flex;
+  height: 20%;
+}
+.welcome-card-div1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .welcome-card-div1 {
+    align-items: center;
+    justify-content: center;
+  }
+}
+.welcome-card-div1 h1 {
+  font-size: 4rem;
+  width: 100%;
+  height: auto;
+}
+.welcome-card-div1 p {
+  margin: 1em 0;
+  width: 100%;
+}
+.connect-button {
+  margin: 20px 0;
+}
+@media (max-width: 500px) {
+  .connect-button {
+    align-items: center;
+    justify-content: center;
+  }
+}
