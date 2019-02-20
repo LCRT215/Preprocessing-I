@@ -137,4 +137,34 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 14px;
+}
+// Variables
+@primary-pink: #f3f6f6;
+@primary-grey: #f3dae1;
+
+// Header
+header {
+  // border: 1px red solid;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 50px;
+  padding-bottom: 10px;
+  background-color: @primary-pink;
+
+  @media (max-width: 500px) {
+    background-color: @primary-grey;
+    align-items: center;
+    justify-content: center;
+  }
+  nav a {
+    margin-left: 40px;
+    margin-right: 20px;
+    font-size: 1.2rem;
+
+    @media (max-width: 500px) {
+      font-size: 1rem;
+    }
+  }
 }

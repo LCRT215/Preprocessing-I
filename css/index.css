@@ -133,4 +133,30 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 14px;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 50px;
+  padding-bottom: 10px;
+  background-color: #f3f6f6;
+}
+@media (max-width: 500px) {
+  header {
+    background-color: #f3dae1;
+    align-items: center;
+    justify-content: center;
+  }
+}
+header nav a {
+  margin-left: 40px;
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  header nav a {
+    font-size: 1rem;
+  }
 }
