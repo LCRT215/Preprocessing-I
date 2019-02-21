@@ -4,56 +4,302 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  max-width: 1024px;
+  font-size: 1.4rem;
+  margin: auto;
+  height: 100%;
+}
+// Variables
+@primary-grey: #f3f6f6;
+@primary-pink: #f2e3e7;
+
+// Mixins
+
+.center {
+  justify-content: center;
+  align-content: center;
 }
 
-html, body {
-    height: 100%;
+.nav {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background-color: @primary-grey;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 30px;
 }
 
+// Header
+header {
+  // border: 1px red solid;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background-color: @primary-grey;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+
+  @media (max-width: 500px) {
+    background-color: @primary-pink;
+    align-items: center;
+    .center;
+  }
+  nav a {
+    font-size: 2rem;
+    margin-left: 40px;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    @media (max-width: 500px) {
+      font-size: 1.8rem;
+      margin-left: 20px;
+    }
+  }
+}
+
+// // Welcome Card
+
+section.welcome-card {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  border: @primary-pink 1px solid;
+  background-color: @primary-pink;
+
+  @media (max-width: 500px) {
+    background-color: @primary-grey;
+  }
+}
+
+//Welcome Card
+.welcome-card-div1 {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0;
+  margin-left: 60px;
+
+  @media (max-width: 500px) {
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+  h1 {
+    margin-bottom: 20px;
+    font-size: 5rem;
+    height: auto;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}
+.welcome-img {
+  max-width: 100%;
+  height: auto;
+}
+
+//Welcome Button
+.connect-button {
+  width: 20%;
+  margin-top: 40px;
+  padding: 10px 0;
+  background: transparent;
+  border: darkgray solid 1px;
+  cursor: pointer;
+
+  @media (max-width: 500px) {
+    .center;
+  }
+}
+
+.connect-button:hover {
+  background-color: @primary-grey;
+  color: white;
+  @media (max-width: 500px) {
+    background-color: @primary-pink;
+    color: white;
+  }
+}
+
+//Mid Cards
+
+section.mid-card {
+  display: flex;
+  padding: 40px 0;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+  div {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 60px;
+
+    @media (max-width: 500px) {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+div.mid1 {
+  h2 {
+    @media (max-width: 500px) {
+      margin-left: 130px;
+    }
+  }
+}
+div.mid2 {
+  h2 {
+    @media (max-width: 500px) {
+      margin-left: 90px;
+    }
+  }
+}
+
+footer {
+  .nav;
+  .center;
+  align-items: center;
+}
