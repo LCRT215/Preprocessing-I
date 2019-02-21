@@ -143,6 +143,8 @@ body {
 .container {
   max-width: 1024px;
   font-size: 1.4rem;
+  margin: auto;
+  height: 100%;
 }
 // Variables
 @primary-grey: #f3f6f6;
@@ -159,69 +161,75 @@ body {
 header {
   // border: 1px red solid;
   display: flex;
-  height: 50px;
+  height: 60px;
   width: 100%;
   background-color: @primary-grey;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 30px;
 
   @media (max-width: 500px) {
     background-color: @primary-pink;
     align-items: center;
-    justify-content: center;
+    .center;
   }
   nav a {
+    font-size: 2rem;
     margin-left: 40px;
     margin-right: 20px;
     font-size: 1.2rem;
-
     @media (max-width: 500px) {
       font-size: 1rem;
     }
   }
 }
 
-// Welcome Card
+// // Welcome Card
 
-section.welcome-card {
-  margin-top: 20px;
-  display: flex;
+// section.welcome-card {
+//   margin-top: 20px;
 
-  img {
-  }
-}
+//   img.welcome-img {
+//     width: 70%;
+//     height: auto;
+//   }
+// }
 
-.welcome-card-div1 {
-  display: flex;
-  flex-wrap: wrap;
+// .welcome-card-div1 {
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: wrap;
 
-  @media (max-width: 500px) {
-    align-items: center;
-    justify-content: center;
-  }
-  h1 {
-    font-size: 4rem;
-    height: auto;
-  }
-  p {
-    margin: 1em 0;
-  }
-}
+//   @media (max-width: 500px) {
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   h1 {
+//     font-size: 4rem;
+//     height: auto;
+//   }
+//   p {
+//     margin: 1em 0;
+//   }
+// }
 
-.connect-button {
-  margin: 20px 0;
+// .connect-button {
+//   margin: 20px 0;
 
-  @media (max-width: 500px) {
-    align-items: center;
-    justify-content: center;
-  }
-}
+//   @media (max-width: 500px) {
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
 
-section.mid-card {
-  display: flex;
-  background: #f9f1f3;
+// section.mid-card {
+//   display: flex;
+//   background: #f9f1f3;
 
-  div.mid {
-    justify-content: space-around;
-    border: purple 2px solid;
-    .center;
-  }
-}
+//   div.mid {
+//     justify-content: space-around;
+//     border: purple 2px solid;
+//     .center;
+//     width: 200px;
+//   }
+// }
