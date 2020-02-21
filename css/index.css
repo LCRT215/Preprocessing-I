@@ -269,6 +269,9 @@ section.mid-card div h2 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
+div.mid1 {
+  margin-bottom: 30px;
+}
 @media (max-width: 500px) {
   div.mid1 h2 {
     margin-left: 130px;
